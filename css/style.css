@@ -1,0 +1,521 @@
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: "New Amsterdam", sans-serif;
+}
+
+.par {
+    background-color: gray;
+}
+
+/* Global Roles */
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* Global Roles */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(34, 34, 34)
+}
+
+header .header {
+    background-image: url(../imgs/bg1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-bottom: 80px;
+}
+
+header .header .container .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .header .container .nav .logo img {
+    width: 185px;
+    filter: drop-shadow(0 0 4px gold);
+}
+
+header .header .container .nav .links ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap:50px
+}
+
+header .header .container .nav .links a {
+    text-decoration: none;
+    font-size: 23px;
+    letter-spacing: 2px;
+    color: white;
+    transition: 0.3s;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+header .header .container .nav .links a:hover {
+    color: gold;
+    text-shadow: 0 0 10px gold;
+}
+
+header .header .container .nav .icon i {
+    font-size: 22px;
+    color: white;
+    margin-left: 30px;
+    transition: 0.3s;
+}
+
+header .header .container .nav .icon i:hover {
+    color: gold;
+    text-shadow: 0 0 10px gold;
+}
+
+section .section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section .section .title h2 {
+    color: white;
+    font-size: 100px;
+    letter-spacing: 5px;
+    filter: drop-shadow(0 0 2px gold);
+}
+
+section .section .title h2 span {
+    color: gold;
+    text-shadow: 0 0 6px gold;
+}
+
+section .section .title p {
+    color: white;
+    line-height: 1.6;
+    width: 450px;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+section .section .title button {
+    border: none;
+    width: 250px;
+    height: 70px;
+    border-radius: 40px;
+    background-color: gold;
+    color: black;
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin-top: 40px;
+    box-shadow: 0 0 10px 0 gold;
+}
+
+section .section .image img {
+    width: 430px;
+    animation: shadow 1.5s infinite linear alternate,up-and-down 1.5s infinite linear alternate;
+}
+
+@keyframes shadow {
+    0% {
+        filter: drop-shadow(0 0 2px gold);
+    }
+    25%{
+        filter: drop-shadow(0 0 4px gold);
+    }
+    50%{
+        filter: drop-shadow(0 0 6px gold);
+    }
+    75%{
+        filter: drop-shadow(0 0 8px gold);
+    }
+    100%{
+        filter: drop-shadow(0 0 10px gold);
+    }
+}
+
+@keyframes up-and-down {
+    to{
+        transform: translateY(-10px);
+    }
+}
+
+section .section-1 {
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+
+section .section-1 .container .data-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    text-align: center;
+    cursor: pointer;
+}
+
+section .section-1 .container .data-box .box {
+    background-color: rgba(128, 128, 128, 0.421);
+    width: 275px;
+    height: 250px;
+    border-radius: 20px;
+    padding: 60px 30px;
+    transition: 0.3s;
+}
+
+section .section-1 .container .data-box .box:hover {
+    background-color: gold;
+    animation: shadow 1.2s infinite linear alternate;
+}
+
+section .section-1 .container .data-box .box .icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-shadow: 0 0 4px 0 gray inset,0 0 3px white;
+    transition: 0.3s;
+}
+
+section .section-1 .container .data-box .box:hover .icon {
+    background-color: rgb(41, 39, 39);
+    box-shadow: 0 0 4px 0 white inset,0 0 4px rgb(41, 39, 39);
+}
+
+section .section-1 .container .data-box .box .icon i {
+    font-size: 20px;
+    color: black;
+    transition: 0.3s;
+}
+
+section .section-1 .container .data-box .box:hover .icon i {
+    color: white;
+}
+
+section .section-1 .container .data-box .box .text {
+    margin-top: 20px;
+}
+
+section .section-1 .container .data-box .box .text h2 {
+    color: white;
+    font-size: 30px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+section .section-1 .container .data-box .box:hover .text h2 {
+    color: black;
+}
+
+section .section-1 .container .data-box .box .text span {
+    background-color: gold;
+    width: 70px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 0 gold;
+    transition: 0.3s;
+}
+
+section .section-1 .container .data-box .box:hover .text span {
+    background-color: rgb(41, 39, 39);
+    box-shadow: 0 0 4px 0 white inset,0 0 4px rgb(41, 39, 39);
+    color: white;
+}
+
+section .section-2 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: rgb(89, 88, 88);
+    border-radius: 100px;
+}
+
+section .section-2 .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .section-2 .title h2 {
+    font-size: 70px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    color: gold;
+    text-shadow: 0 0 4px gold;
+}
+
+section .section-2 .title h2 span {
+    color: white;
+    position: relative;
+}
+
+section .section-2 .title h2 span::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 4px;
+    background-color: gold;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    animation: width 1s infinite linear alternate;
+    box-shadow: 0 0 4px 0 gold;
+}
+
+@keyframes width {
+    to {
+        width: 100%;
+    }
+}
+
+section .section-2 .info-data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+section .section-2 .info-data .text {
+    width: 570px;
+}
+
+section .section-2 .info-data .text p {
+    font-size: 30px;
+    color: white;
+    letter-spacing: 2px;
+    line-height: 1.6;
+}
+
+
+section .section-2 .image img {
+    width: 350px;
+    border-radius: 10px;
+    animation: shadow 1.2s infinite linear alternate,up-and-down 1s infinite linear alternate;
+}
+
+section .section-3 {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    position: relative;
+}
+
+section .section-3::before {
+    content: '';
+    position: absolute;
+    border-width: 30px;
+    border-style: solid;
+    border-color: transparent gold transparent transparent;
+    left: 40px;
+    top: 500px;
+}
+
+section .section-3::after {
+    content: '';
+    position: absolute;
+    border-width: 30px;
+    border-style: solid;
+    border-color: transparent transparent transparent gold;
+    right: 40px;
+    top: 500px;
+}
+
+section .section-3 .title {
+    text-align: center;
+}
+
+section .section-3 .title h2 span {
+    font-size: 60px;
+    color: gold;
+    letter-spacing: 2px;
+    text-shadow: 0 0 3px gold;
+    position: relative;
+}
+
+section .section-3 .title h2 span::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 4px;
+    background-color: gold;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    animation: width 1s infinite linear alternate;
+    box-shadow: 0 0 4px 0 gold;
+}
+
+section .section-3 .chr {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 30px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+section .section-3 .charcter .chr .box {
+    background-color: rgba(128, 128, 128, 0.293);
+    border-radius: 15px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid gold;
+    cursor: pointer;
+}
+
+section .section-3 .charcter .chr .box img {
+    width: 250px;
+    filter: blur(20px);
+    transition: 0.3s;
+}
+
+section .section-3 .charcter .chr .box img:hover{
+    filter: blur(0) drop-shadow(0 0 4px gold);
+    animation: up-and-down 1s infinite linear alternate;
+}
+
+section .section-4 {
+    padding-top: 100px;
+    padding-bottom: 150px;
+}
+
+section .section-4 .container .profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 120px;
+}
+
+section .section-4 .container .profile .image img {
+    width: 320px;
+    filter: drop-shadow(0 0 5px gold);
+    animation: up-and-down 1s infinite linear alternate;
+}
+
+section .section-4 .container .profile .text {
+    width: 550px;
+    background-color: rgba(170, 169, 169, 0.619);
+    min-height: 350px;
+    padding: 50px 30px;
+    border-radius: 15px;
+}
+
+section .section-4 .container .profile .text p {
+    font-size: 22px;
+    letter-spacing: 1px;
+    list-style: 1.6;
+}
+
+section .section-4 .container .profile .text p span {
+    color: gold;
+    font-size: 25px;
+    text-shadow: 0 0 3px gold;
+}
+
+section .section-4 .container .profile .text button {
+    border: none;
+    width: 175px;
+    height: 50px;
+    border-radius: 40px;
+    background-color: gold;
+    color: black;
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin-top: 40px;
+    box-shadow: 0 0 10px 0 gold;
+}
+
+footer .footer {
+    background-color: black;
+    border-radius: 100px 100px 0 0;
+}
+
+footer .footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .footer .container .logo img {
+    width: 250px;
+    animation: shadow 1.5s infinite linear alternate;
+}
+
+footer .footer .container .icon i {
+    color: white;
+    font-size: 30px;
+    margin-left: 30px;
+    transition: 0.3s;
+}
+
+footer .footer .container .icon .blue:hover {
+    color: blue;
+    text-shadow: 0 0 4px blue;
+}
+
+footer .footer .container .icon .sky:hover {
+    color: rgb(18, 169, 229);
+    text-shadow: 0 0 4px rgb(18, 169, 229);
+}
+
+footer .footer .container .icon .purple:hover {
+    color: purple;
+    text-shadow: 0 0 4px purple;
+}
+
+.up {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gold;
+    box-shadow: 0 0 5px gold;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+.up a i {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+}
